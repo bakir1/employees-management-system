@@ -10,7 +10,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Create Country') }}</div>
+                <div class="card-header">
+                    {{ __('Create Country') }}
+                    <a href="{{ route('countries.index') }}" class="float-right">Back</a>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('countries.store') }}">
@@ -19,7 +22,7 @@
 
                         <div class="form-group row">
                             <label for="country_code"
-                                class="col-md-4 col-form-label text-md-right">{{ __('country_code') }}</label>
+                                class="col-md-4 col-form-label text-md-right">{{ __('Country Code') }}</label>
 
                             <div class="col-md-6">
                                 <input id="country_code" type="text"
