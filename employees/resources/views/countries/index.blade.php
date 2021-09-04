@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Users</h1>
+    <h1 class="h3 mb-0 text-gray-800">Countries</h1>
 </div>
 
 <div class="row">
@@ -18,7 +18,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col">
-                  <form method="GET" action="{{ route('users.index') }}">
+                  <form method="GET" action="{{ route('countries.index') }}">
                      <div class="form-row align-items-center">
                         <div class="col">
                             <input type="search" name="search" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
@@ -48,9 +48,9 @@
                 <tbody>
                  @foreach($countries as $country)
                         <tr>
-                    <th scope="row">{{ $countrie->id }}</th>
-                    <td>{{ $countrie->country_code }}</td>
-                    <td>{{ $countrie->name }}</td>
+                    <th scope="row">{{ $country->id }}</th>
+                    <td>{{ $country->country_code }}</td>
+                    <td>{{ $country->name }}</td>
                     <td>
                         <a href="{{ route('countries.edit', $country->id) }}" class="btn btn-success">Edit</a>
                     </td>
