@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\City;
+
 
 class CityController extends Controller
 {
@@ -14,7 +16,8 @@ class CityController extends Controller
      */
     public function index()
     {
-        //
+        $cities = City::all();
+        return view('cities.index', compact('cities'));
     }
 
     /**
