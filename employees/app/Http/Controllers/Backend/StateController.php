@@ -19,7 +19,7 @@ class StateController extends Controller
     {
         $states = State::all();
         if ($request->has('search')){
-            $state = State::where('name', 'like', "%{$request->search}%")->get();
+            $states = State::where('name', 'like', "%{$request->search}%")->get();
         }
 
         return view('states.index', compact('states'));
